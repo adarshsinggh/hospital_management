@@ -20,7 +20,6 @@ public class Patient implements Serializable {
     @NotBlank(message = "Name Cannot be Empty")
     private String name;
     
-    @NotBlank(message = "Age Cannot be Empty")
     private int age;
 
     @NotBlank(message = "Room Cannot be Empty")
