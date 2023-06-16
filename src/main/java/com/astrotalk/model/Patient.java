@@ -7,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
 
 @javax.persistence.Entity
 @Table(name = "patients")
@@ -16,16 +15,13 @@ public class Patient implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    
-    @NotBlank(message = "Name Cannot be Empty")
+   
     private String name;
     
     private int age;
-
-    @NotBlank(message = "Room Cannot be Empty")
+	
     private String room;
-
-    @NotBlank(message = "Doctor Name Cannot be Empty")
+	
     private String doctorName;
 
     private Date admitDate;
