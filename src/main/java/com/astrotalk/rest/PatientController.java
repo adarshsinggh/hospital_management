@@ -19,7 +19,6 @@ import com.astrotalk.model.Patient;
 import com.astrotalk.service.PatientService;
 
 @RestController
-@Validated
 @RequestMapping("/rest/operations")
 public class PatientController {
 	
@@ -27,7 +26,7 @@ public class PatientController {
 	private PatientService patientService;
 	
 	@PostMapping(path = "/admitPatient")
-	public ResponseEntity<String> admitPatient(@Valid @RequestBody Patient patient){
+	public ResponseEntity<String> admitPatient(@RequestBody Patient patient){
 		return patientService.saveAdmitPatient(patient);
 	} 
 	
